@@ -1,0 +1,33 @@
+databaseChangeLog:
+  - changeSet:
+      id: 3
+      author: titus
+      changes:
+        - insert:
+            tableName: liquibase
+            columns:
+              - column:
+                  name: id
+                  valueNumeric: 1
+              - column:
+                  name: name
+                  value: Titus
+              - column:
+                  name: Vocation
+                  value: Data Scientist
+        - insert:
+            tableName: liquibase
+            columns:
+              - column:
+                  name: id
+                  valueNumeric: 2
+              - column:
+                  name: name
+                  value: Claude
+              - column:
+                  name: Vocation
+                  value: Agent
+      rollback:
+        - delete:
+            tableName: liquibase
+            where: id IN (1,2)

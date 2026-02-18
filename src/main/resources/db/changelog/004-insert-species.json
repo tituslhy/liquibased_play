@@ -1,0 +1,33 @@
+{
+  "databaseChangeLog": [
+    {
+      "changeSet": {
+        "id": "4",
+        "author": "titus",
+        "changes": [
+          {
+            "addColumn": {
+              "tableName": "liquibase",
+              "columns": [
+                {
+                  "column": {
+                    "name": "is_human",
+                    "type": "BOOLEAN"
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "rollback": [
+          {
+            "dropColumn": {
+              "tableName": "liquibase",
+              "columnName": "is_human"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
