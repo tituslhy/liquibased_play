@@ -1,4 +1,4 @@
-# liquibased_play
+# Liquibased Play
 Playing with Liquibase
 
 <p align="center">
